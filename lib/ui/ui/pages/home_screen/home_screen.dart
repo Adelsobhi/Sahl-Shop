@@ -6,6 +6,7 @@ import 'package:sahl_shop/ui/ui/pages/home_screen/cubit/home_screen_view_model.d
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_routes.dart';
+import '../../../../core/utils/app_styles.dart';
 import '../../widgets/custom_text_form_field.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,34 +19,17 @@ HomeScreenViewModel viewModel = HomeScreenViewModel();
   Widget build(BuildContext context) {
     return BlocBuilder(
       bloc: viewModel,
-      builder: (context ,state){
+        builder: (context ,state){
         return  Scaffold(
           appBar: AppBar(
             backgroundColor: AppColors.whiteColor,
             elevation: 0,
-            title: Column(children: [
-              Image.asset(
-                AppAssets.logoApp,
-                width: 70.w,
-              ),
-              Row(children: [
-                CustomTextFormField(filledColor: AppColors.whiteColor,
-                    hintText: "what do you search for?",
-                    prefixIcon: Icon(Icons.search, color: AppColors.primaryColor,),
+            title: Text(
+              "Sahl Shop",
+              style: AppStyles.semi20Primary,
+            ),
 
-                ),
-                IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart, color: AppColors.primaryColor,size: 24.sp,))
-
-              ],),
-
-              CustomTextFormField(
-                hintText: "what do you search for?",
-                prefixIcon: Icon(Icons.search, color: AppColors.primaryColor,)
-              ),
-
-            ],)
           ),
-
           body:Padding(
             padding:  EdgeInsets.symmetric(horizontal: 10.w),
             child: viewModel.bodyList[viewModel.selectedIndex],
@@ -82,7 +66,7 @@ HomeScreenViewModel viewModel = HomeScreenViewModel();
                   _bottomNavBarItemBuilder(
                     isSelected: viewModel.selectedIndex == 3,
                     selectedIcon: AppAssets.selectedFavouriteIcon,
-                    unselectedIcon: AppAssets.unSelectedFavouriteIcon,
+                    unselectedIcon: AppAssets.unSelectedAccountIcon,
                   ),
                 ],
               ),
