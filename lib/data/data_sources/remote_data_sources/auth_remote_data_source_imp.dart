@@ -1,6 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
+import 'package:sahl_shop/core/api/api_constants.dart';
 import 'package:sahl_shop/core/api/api_manager.dart';
 import 'package:sahl_shop/data/models/RegisterResponseDM.dart';
 import 'package:sahl_shop/domain/entities/LoginResponseEntity.dart';
@@ -28,7 +29,7 @@ import '../../models/LoginResponseDM.dart';
               "password": password,
               "rePassword": rePassword,
               "phone": phone
-            }
+            }, url: ApiConstants.baseUrl
         );
 
         var registerResponse = RegisterResponseDm.fromJson(response.data);
@@ -61,7 +62,7 @@ import '../../models/LoginResponseDM.dart';
             body: {
               "email": email,
               "password": password,
-           }
+           }, url: ApiConstants.baseUrl
         );
 
         var loginResponse = LoginResponseDm.fromJson(response.data);

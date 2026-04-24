@@ -20,9 +20,15 @@ class AppStyles {
     fontWeight: FontWeight.w300,
     color: AppColors.searchHintColor,
   );
-
   static TextStyle light16White = GoogleFonts.poppins(
       fontSize: 16, fontWeight: FontWeight.w300, color: AppColors.whiteColor);
+  static TextStyle light12Primary = GoogleFonts.poppins(
+      fontSize: 12, fontWeight: FontWeight.w300, color: AppColors.primaryColor);
+  static TextStyle light10Primary = GoogleFonts.poppins(
+      fontSize: 10, fontWeight: FontWeight.w300, color: AppColors.primaryColor);
+  static TextStyle light8Primary = GoogleFonts.poppins(
+      fontSize: 8, fontWeight: FontWeight.w300, color: AppColors.primaryColor);
+
 
   static TextStyle light12White = GoogleFonts.poppins(
       fontSize: 12, fontWeight: FontWeight.w300, color: AppColors.whiteColor);
@@ -66,11 +72,24 @@ class AppStyles {
       fontSize: 18, fontWeight: FontWeight.w500, color: AppColors.primaryColor);
   static TextStyle medium14Header = GoogleFonts.poppins(
       fontSize: 14, fontWeight: FontWeight.w500, color: AppColors.primaryColor);
+  static TextStyle medium12Header = GoogleFonts.poppins(
+      fontSize: 12, fontWeight: FontWeight.w500, color: AppColors.primaryColor);
   static TextStyle medium18White = GoogleFonts.poppins(
       fontSize: 18, fontWeight: FontWeight.w500, color: AppColors.whiteColor);
   static TextStyle medium16White = GoogleFonts.poppins(
       fontSize: 16, fontWeight: FontWeight.w500, color: AppColors.whiteColor);
   static TextStyle medium12White = GoogleFonts.poppins(
       fontSize: 12, fontWeight: FontWeight.w500, color: AppColors.whiteColor);
+  static TextStyle medium12Primary = GoogleFonts.poppins(
+      fontSize: 12, fontWeight: FontWeight.w500, color: AppColors.primaryColor);
+  static TextStyle medium14Primary= GoogleFonts.poppins(
+      fontSize: 14, fontWeight: FontWeight.w500, color: AppColors.primaryColor);
+  static TextStyle medium10Primary= GoogleFonts.poppins(
+      fontSize: 10, fontWeight: FontWeight.w500, color: AppColors.primaryColor);
+
+  static TextStyle medium10White= GoogleFonts.poppins(
+      fontSize: 10, fontWeight: FontWeight.w500, color: AppColors.whiteColor);
+  static TextStyle medium8Primary= GoogleFonts.poppins(
+      fontSize: 8, fontWeight: FontWeight.w500, color: AppColors.primaryColor);
 }
 

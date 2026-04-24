@@ -5,6 +5,7 @@ import 'package:sahl_shop/core/utils/app_routes.dart';
 import 'package:sahl_shop/ui/ui/auth/login/login_screen.dart';
 import 'package:sahl_shop/ui/ui/auth/register/register_screen.dart';
 import 'package:sahl_shop/ui/ui/pages/home_screen/home_screen.dart';
+import 'package:sahl_shop/ui/ui/pages/product_details_screen/product_details_screen.dart';
 
 import 'core/di/di.dart';
 import 'core/utils/my_bloc_observer.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
             AppRoutes.registerRoute: (context) => RegisterScreen(),
             AppRoutes.loginRoute: (context) => LoginScreen(),
             AppRoutes.homeRoute: (context) =>  HomeScreen(),
+            AppRoutes.productDetailsRoute: (context) => ProductDetailsScreen(),
           },
         );
       },

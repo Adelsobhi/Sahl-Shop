@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:sahl_shop/core/errors/errors.dart';
 import 'package:sahl_shop/domain/entities/CategoryOrBrandResponseEntity.dart';
+import 'package:sahl_shop/domain/entities/ProductResponseEntity.dart';
 import 'package:sahl_shop/domain/repositories/data_sources/remote_data_sources/home_remote_data_source.dart';
 import 'package:sahl_shop/domain/repositories/home/home_repository.dart';
 @Injectable(as: HomeRepository)
@@ -22,5 +23,11 @@ class HomeRepositoryImp extends HomeRepository{
     return either.fold((error)=>Left(error),
             (response)=>Right(response)
     );
+  }
+
+  @override
+  Future<ProductResponseEntity> getAllProducts()async {
+  var response= await homeRemoteDataSource.getAllProducts();
+  return response;
   }
 }

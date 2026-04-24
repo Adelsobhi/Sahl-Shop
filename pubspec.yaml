@@ -49,6 +49,7 @@ dependencies:
   bloc: ^9.2.0
   flutter_image_slideshow: ^0.1.6
   cached_network_image: ^3.4.1
+  readmore: ^3.0.0
 
 
 
