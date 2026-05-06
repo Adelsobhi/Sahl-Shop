@@ -20,6 +20,11 @@ class AppStyles {
     fontWeight: FontWeight.w300,
     color: AppColors.searchHintColor,
   );
+  static TextStyle light12SearchHint = GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.w300,
+    color: AppColors.searchHintColor,
+  );
   static TextStyle light16White = GoogleFonts.poppins(
       fontSize: 16, fontWeight: FontWeight.w300, color: AppColors.whiteColor);
   static TextStyle light12Primary = GoogleFonts.poppins(

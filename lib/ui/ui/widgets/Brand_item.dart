@@ -6,9 +6,9 @@ import 'package:sahl_shop/domain/entities/CategoryOrBrandResponseEntity.dart';
 
 import '../../../core/utils/app_colors.dart';
 
-class CategoryBrandItem extends StatelessWidget {
+class BrandItem extends StatelessWidget {
  CategoryOrBrandEntity item;
-  CategoryBrandItem({required this.item});
+  BrandItem({required this.item});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,28 +16,28 @@ class CategoryBrandItem extends StatelessWidget {
         Expanded(
           flex: 8,
           child: CachedNetworkImage(
-            width: double.infinity,
-            height: 40.h,
-            fit: BoxFit.cover,
-            imageUrl: item.image??'',
-            imageBuilder: (context, imageProvider) {
-              return CircleAvatar(
-                backgroundImage: imageProvider,
-                radius: 50.r,
-              );
-            },
-            placeholder: (context, url) => const Center(
-              child: CircularProgressIndicator(
-                color: AppColors.primaryDark,
+              width: double.infinity,
+              height: 40.h,
+              fit: BoxFit.cover,
+              imageUrl: item.image??'',
+              imageBuilder: (context, imageProvider) {
+                return CircleAvatar(
+                  backgroundImage: imageProvider,
+                  radius: 50.r,
+                );
+              },
+              placeholder: (context, url) => const Center(
+                child: CircularProgressIndicator(
+                  color: AppColors.primaryDark,
+                ),
               ),
-            ),
-            errorWidget: (context, url, error) =>
-                CircleAvatar(
-                  radius: 50,
-                  backgroundImage: NetworkImage(
-                    "https://f.nooncdn.com/p/0bc2f531194c502dad79691c1a69d592%7Cpzsku/Z6CAB921245CD5ABDCAF0Z/45/1770238301/3f9a1d7a-d574-4f97-80d0-393951333c7b.jpg?width=800",
-                  ),
-                )
+              errorWidget: (context, url, error) =>
+                  CircleAvatar(
+                    radius: 50,
+                    backgroundImage: NetworkImage(
+                      "https://f.nooncdn.com/p/0bc2f531194c502dad79691c1a69d592%7Cpzsku/Z6CAB921245CD5ABDCAF0Z/45/1770238301/3f9a1d7a-d574-4f97-80d0-393951333c7b.jpg?width=800",
+                    ),
+                  )
           ),
         ),
         Expanded(

@@ -50,6 +50,11 @@ dependencies:
   flutter_image_slideshow: ^0.1.6
   cached_network_image: ^3.4.1
   readmore: ^3.0.0
+  shared_preferences: ^2.5.5
+  image_picker: ^1.2.2
+  path_provider: ^2.1.5
+  badges: ^3.2.0
+
 
 
 

@@ -10,7 +10,7 @@ class GetAllProductUseCase {
   HomeRepository homeRepository;
   GetAllProductUseCase({required this.homeRepository});
 
-  Future<ProductResponseEntity>  invoke(){
+  Future<Either<Errors, ProductResponseEntity>>  invoke(){
   return homeRepository.getAllProducts();
  }
 }

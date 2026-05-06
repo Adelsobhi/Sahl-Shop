@@ -43,7 +43,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         }
         else if(state is RegisterSuccessState){
           DialogUtils.hideLoading(context);
-          DialogUtils.showMessage(context: context, message:'Register successfully',posActionName: 'ok',title: 'Success');
+          DialogUtils.showMessage(context: context, message:'Register successfully',posActionName: 'ok',title: 'Success',posAction: (){
+            Navigator.of(context).pushReplacementNamed(AppRoutes.loginRoute);
+          });
 
         }
       },

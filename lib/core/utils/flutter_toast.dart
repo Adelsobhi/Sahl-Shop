@@ -3,7 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class ToastMessage {
   static Future<bool?> toastMsg(
-      String msg, Color backgroundColor, Color textColor) {
+      {required String msg, required Color backgroundColor, required Color textColor}) {
     return Fluttertoast.showToast(
         msg: msg,
         toastLength: Toast.LENGTH_SHORT,
@@ -11,6 +11,7 @@ class ToastMessage {
         timeInSecForIosWeb: 1,
         backgroundColor: backgroundColor,
         textColor: textColor,
-        fontSize: 20);
+        webShowClose: true,
+        fontSize: 14);
   }
 }

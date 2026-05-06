@@ -14,7 +14,7 @@ class CustomTxt extends StatelessWidget {
   final int? maxLines;
 
 
-  const CustomTxt({
+  const CustomTxt( {
     this.fontWeight,
     required this.text,
     this.fontColor,

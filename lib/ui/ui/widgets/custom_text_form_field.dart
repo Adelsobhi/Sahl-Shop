@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/utils/app_colors.dart';
 
 class CustomTextFormField extends StatefulWidget {
+   Function(String)? onChanged;
    Color? filledColor;
    Color borderColor;
    TextStyle? hintStyle;
@@ -37,6 +38,7 @@ class CustomTextFormField extends StatefulWidget {
     this.isObscureText = false,
     this.isPassword = false,
     this.readonly = false,
+    this.onChanged,
   });
 
   @override
@@ -50,7 +52,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
     return Padding(
       padding:  EdgeInsets.only(top: 12.h, bottom: 20.h),
       child: TextFormField(
-
+        onChanged: widget.onChanged,
         readOnly: widget.readonly,
         controller: widget.controller,
         validator: widget.validator,

@@ -6,6 +6,7 @@ import 'package:sahl_shop/core/di/di.dart';
 import 'package:sahl_shop/core/utils/app_styles.dart';
 import 'package:sahl_shop/core/utils/dialog_utils.dart';
 import 'package:sahl_shop/ui/ui/auth/login/cubit/register_view_model.dart';
+import '../../../../core/cache/shared_preference.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_routes.dart';
@@ -32,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if(state is LoginSuccessState) {
           DialogUtils.hideLoading(context);
           DialogUtils.showMessage(context: context, message: "Login Success",title: 'Success',posActionName: 'ok',posAction: (){
+              SharedPreference.saveData(key: 'token', value: state.loginResponseEntity.token);
             Navigator.of(context).pushReplacementNamed(AppRoutes.homeRoute);
           });
 
