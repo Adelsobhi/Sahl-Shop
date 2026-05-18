@@ -1,16 +1,44 @@
-# sahl_shop
+# SAHL SHOP
+Modern E Commerce Flutter Application
 
-A new Flutter project.
+## About The Project
+SAHL SHOP is a cross platform e commerce mobile application developed using Flutter and Dart
+The app provides a modern shopping experience with responsive UI product browsing cart management and API integration
 
-## Getting Started
+## Features
+Authentication System
+Product Browsing
+Cart Management
+Responsive UI Design
+REST APIs Integration
+Clean Architecture
+State Management Provider and BLoC
+Cross Platform Support Android and iOS
 
-This project is a starting point for a Flutter application.
+## Technologies Used
+Flutter
+Dart
+REST APIs
+Clean Architecture
+Provider
+BLoC
+Implemented Dependency Injection DI
+Git and GitHub
 
-A few resources to get you started if this is your first Flutter project:
+## Architecture
+The project follows Clean Architecture and Repository Pattern
+UI Layer
+Data Layer
+Domain Layer
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Developer
+Adel Sobhi Mohamed
+Flutter Developer
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+### Home Screen
+![Home Screen](./assets/images/home_screen.png)
+### Products Screen
+![Products Screen](./assets/images/products_screen.png)
+### App Screen
+![App Screen](./assets/images/app_screen.png)
